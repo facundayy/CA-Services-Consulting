@@ -1,0 +1,24 @@
+USE contactos;
+GO
+
+IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'contactos')
+CREATE DATABASE contactos;
+GO
+
+SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'Contactos';
+
+CREATE TABLE Contactos (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    nombre NVARCHAR(100) NOT NULL,
+    email NVARCHAR(100) NOT NULL,
+    telefono NVARCHAR(20) NOT NULL,
+    mensaje NVARCHAR(MAX) NOT NULL
+);
+
+USE contactos; 
+SELECT * FROM Contactos;
+
+DELETE FROM Contactos WHERE nombre = 'Juan';
+DELETE FROM Contactos WHERE id = '1'
