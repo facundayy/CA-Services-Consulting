@@ -1,3 +1,4 @@
+/* Estilos base para todos los dispositivos */
 * {
     margin: 0;
     padding: 0;
@@ -26,6 +27,9 @@ body::before {
 .container {
     position: relative;
     z-index: 2; 
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
 }
 
 header {
@@ -38,9 +42,6 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 2rem;
 }
 
 header h1 {
@@ -91,81 +92,59 @@ header nav ul li a:hover {
     font-size: 1.2rem;
 }
 
-
 .section {
     padding: 4rem 0;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: all 0.3s ease; 
-    margin: 2rem; 
+    margin: 2rem 0; /* Margen ajustado para dispositivos móviles */
 }
 
-.section:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 2rem;
-}
-
-.sobre-nosotros-container,
-.innovacion-tecnologia-container {
+.container.sobre-nosotros-container,
+.container.innovacion-tecnologia-container {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 2rem; 
+    align-items: center;
+    justify-content: center;
 }
 
-.sobre-nosotros-container .content,
-.innovacion-tecnologia-container .content {
+.content {
     flex: 1;
     padding: 2rem;
 }
 
-.sobre-nosotros-container .image-container,
-.innovacion-tecnologia-container .image-container {
+.image-container {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.sobre-nosotros-container img,
-.innovacion-tecnologia-container img {
+.image-container img {
     max-width: 100%;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
-.sobre-nosotros-container img:hover,
-.innovacion-tecnologia-container img:hover {
+.image-container img:hover {
     transform: scale(1.05); 
 }
-
 
 .servicios-container {
     text-align: center;
 }
 
-.servicios-titulo {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
 .services-wrapper {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-around;
     margin-top: 2rem;
 }
 
 .services-wrapper .service {
     flex: 1;
     margin: 1rem;
-    max-width: 30%;
+    max-width: calc(33% - 2rem); /* Ancho ajustado para dispositivos móviles */
     text-align: center;
     padding: 2rem;
     background: #fff;
@@ -272,4 +251,31 @@ form button:hover {
 
 .redes-sociales a:hover img {
     transform: scale(1.1);
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem; /* Ajusta el padding general */
+    }
+
+    header .container {
+        padding: 0 1rem; /* Ajusta el padding del encabezado */
+    }
+
+    .hero-section h2 {
+        font-size: 2rem; /* Ajusta el tamaño del título en la sección hero */
+    }
+
+    .hero-section p {
+        font-size: 1rem; /* Ajusta el tamaño del texto en la sección hero */
+    }
+
+    .services-wrapper .service {
+        max-width: calc(50% - 2rem); /* Ajusta el ancho máximo de los servicios */
+    }
+
+    form {
+        padding: 1rem; /* Ajusta el padding del formulario */
+    }
 }
