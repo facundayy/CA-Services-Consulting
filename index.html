@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Services & Consulting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CA Services & Consulting</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#innovacion-tecnologia">Innovación y Tecnología</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero-section">
+        <div class="hero-overlay">
+            <div class="container">
+                <h2>Soluciones Integrales en Tecnologías</h2>
+                <p>Optimiza tu negocio con nuestras innovadoras herramientas tecnológicas</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-nosotros" class="section">
+        <div class="container sobre-nosotros-container">
+            <div class="content">
+                <h2>Sobre Nosotros</h2>
+                <p>Nuestra empresa se dedica a ofrecer una amplia gama de servicios que incluyen la importación, exportación, desarrollo y comercialización de sistemas, software y hardware. Nos especializamos en soluciones integrales de tecnología, ofreciendo soporte, instalación, mantenimiento y capacitación. Además, brindamos servicios de investigación, diseño y automatización de procesos para mejorar tus líneas de negocio.</p>
+            </div>
+            <div class="image-container">
+                <img src=".//Captura de pantalla 2024-07-13 175441.png" alt="Sobre Nosotros">
+            </div>
+        </div>
+    </section>
+
+    <section id="innovacion-tecnologia" class="section">
+        <div class="container innovacion-tecnologia-container">
+            <div class="content">
+                <h2>Innovación y Tecnología</h2>
+                <p>Llevamos tu negocio al siguiente nivel con nuestras soluciones innovadoras. 
+                   En un mundo donde la tecnología evoluciona a un ritmo vertiginoso, es crucial mantenerse a la vanguardia. 
+                   Nuestro equipo de expertos está comprometido en proporcionar las herramientas y estrategias necesarias 
+                   para impulsar tu empresa hacia el futuro. Desde la implementación de sistemas avanzados de software hasta 
+                   el desarrollo de aplicaciones personalizadas, nos aseguramos de que cada solución esté alineada con tus 
+                   objetivos de negocio.
+                </p>
+                <p>
+                   Nos especializamos en integrar las últimas tendencias tecnológicas para optimizar tus procesos operativos 
+                   y mejorar la eficiencia. Con un enfoque en la innovación continua, trabajamos para crear un entorno donde 
+                   tu negocio no solo se adapte, sino que prospere en el panorama digital actual. Ya sea que necesites soporte 
+                   técnico especializado, consultoría en IT, o desarrollo de soluciones a medida, estamos aquí para ayudarte a 
+                   navegar y aprovechar al máximo las oportunidades que ofrece la tecnología moderna.
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="./Captura de pantalla 2024-07-13 185350.png" alt="Innovación y Tecnología">
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="section">
+        <div class="container servicios-container">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-wrapper">
+                <div class="service">
+                    <img src="./Consultoria-de-TI.png" alt="Consultoría en TI">
+                    <h3>Consultoría en TI</h3>
+                    <p>Ofrecemos consultoría especializada en tecnologías de la información para optimizar y transformar tus procesos de negocio.</p>
+                </div>
+                <div class="service">
+                    <img src=".//herramientas-de-desarrollo-de-software.jpg" alt="Desarrollo de Software">
+                    <h3>Desarrollo de Software</h3>
+                    <p>Desarrollamos soluciones de software a medida para satisfacer las necesidades específicas de tu empresa.</p>
+                </div>
+                <div class="service">
+                    <img src="./0_kIJRMLiBAVJOIKqZ.jpg" alt="Soporte Técnico">
+                    <h3>Soporte Técnico</h3>
+                    <p>Brindamos soporte técnico profesional para garantizar el funcionamiento continuo de tus sistemas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form id="contacto-formulario" action="http://localhost:3001/guardar-contacto" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="tel" name="telefono" placeholder="Teléfono" required>
+                <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+            <div id="mensaje-exito" style="display: none;">
+                <p>¡Mensaje enviado exitosamente!</p>
+            </div>
+            <div class="redes-sociales">
+                <h3>Síguenos en redes sociales:</h3>
+                <a href="#" target="_blank"><img src="./facebook-logo-facebook-icon-transparent-free-png.webp" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="./twitter_logo_icon_186891.webp" alt="Twitter"></a>
+                <a href="#" target="_blank"><img src="./logotipo-cuadrado-linkedin-aislado-sobre-fondo-blanco_469489-892.avif" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CA Services & Consulting. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
